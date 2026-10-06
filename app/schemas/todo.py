@@ -14,3 +14,8 @@ class TodoResponse(BaseModel):
     completed: bool
 
     model_config = ConfigDict(from_attributes=True)
+    
+class TodoUpdate(BaseModel):
+    title: str
+    description: str | None = None
+    completed: bool
