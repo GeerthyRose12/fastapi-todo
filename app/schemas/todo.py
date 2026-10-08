@@ -12,9 +12,11 @@ class TodoResponse(BaseModel):
     title: str
     description: str | None
     completed: bool
+    user_id: int
 
     model_config = ConfigDict(from_attributes=True)
-    
+
+
 class TodoUpdate(BaseModel):
     title: str
     description: str | None = None
